@@ -1,5 +1,5 @@
 <script lang="ts">
-  import LinkButton from '$lib/LinkButton.svelte'
+  import LinkButton from "$lib/LinkButton.svelte";
 </script>
 
 <body>
@@ -25,7 +25,8 @@
       <LinkButton
         link="https://www.linkedin.com/in/fernando-fransisco-halim-a8405b131/"
         text="Linkedin"
-        type="btn-secondary" />
+        type="btn-secondary"
+      />
     </div>
   </div>
 </body>
