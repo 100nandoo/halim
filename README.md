@@ -29,4 +29,4 @@ To format automatically on save, add the [prettier extension](https://marketplac
 
 ## Theme
 
-The default daisy UI theme being used is `cupcake`. If you like to change it simply change on `app.html`
+The default daisy UI theme being used is `sunset`. If you like to change it simply change on `app.html`

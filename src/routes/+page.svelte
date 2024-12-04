@@ -8,7 +8,7 @@
     <div class="max-w-lg">
       <h1 class="text-4xl font-bold">Hello,<br /> I'm Fernando</h1>
       <p class="pt-8 md:py-8">
-        I’m an Android Developer with six years of experience based in sunny Singapore. Android
+        I’m an Android Developer with seven years of experience based in sunny Singapore. Android
         tinkerer, six-string strummer & movie buff.
       </p>
     </div>
@@ -26,6 +26,6 @@
       link="https://www.linkedin.com/in/fernando-fransisco-halim-a8405b131/"
       text="Linkedin"
     />
-    <LinkButton link="https://twitter.com/100nandoo" text="Twitter" type="btn-secondary" />
+    <LinkButton link="https://bsky.app/profile/halim.dev" text="Bluesky" type="btn-info" />
   </div>
 </div>

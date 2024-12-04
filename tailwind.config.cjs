@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js,svelte,ts}"],
-  theme: {
-    extend: {}
+  daisyui: {
+    themes: ["nord", "sunset", "dracula"],
   },
   plugins: [require("daisyui")]
 };
