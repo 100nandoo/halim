@@ -1,7 +1,9 @@
-<script lang="ts">
-  import LinkButton from "$lib/LinkButton.svelte";
-  import { text } from "@sveltejs/kit";
-</script>
+---
+import LinkButton from "../components/LinkButton.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Halim.dev" description="Fernando Fransisco Halim personal blog 100nandoo">
 
 <div class="max-w-4xl mx-auto p-4">
   <div class="flex flex-wrap align-middle">
@@ -15,7 +17,7 @@
 
     <div class="avatar mx-auto my-8 md:my-0">
       <div class="w-48 h-48 mask mask-squircle">
-        <img src="profile.webp" alt="profile_image" />
+        <img src="/profile.webp" alt="profile_image" />
       </div>
     </div>
   </div>
@@ -23,9 +25,11 @@
   <div class="flex gap-4 justify-center md:justify-start">
     <LinkButton link="https://github.com/100nandoo" text="Github" type="btn-accent" />
     <LinkButton
+     
       link="https://www.linkedin.com/in/fernando-fransisco-halim-a8405b131/"
       text="Linkedin"
     />
     <LinkButton link="https://bsky.app/profile/halim.dev" text="Bluesky" type="btn-info" />
   </div>
 </div>
+</Layout>

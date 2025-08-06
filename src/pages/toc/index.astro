@@ -1,8 +1,10 @@
-<script lang="ts">
-  import TextJustify from "$lib/TextJustify.svelte";
-  import Header from "$lib/Header.svelte";
-</script>
+---
+import TextJustify from "../../components/TextJustify.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+---
 
+<Layout title="Terms & Conditions" description="Pocket QR Terms & Conditions">
 <div class="xl:max-w-2xl mx-auto p-2 xl:py-2">
   <Header mt={false}>Terms & Conditions</Header>
 
@@ -112,3 +114,4 @@
     contact us at <a class="text-accent" href="mailto: dev@halim.dev">dev@halim.dev</a>.
   </TextJustify>
 </div>
+</Layout>
