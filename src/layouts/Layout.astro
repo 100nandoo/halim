@@ -12,13 +12,22 @@ const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="sunset">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        return "sunset";
+      })();
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
     <ViewTransitions />
   </head>
 
@@ -27,7 +36,7 @@ const { title, description } = Astro.props;
       <Navbar />
     </header>
     <main>
-        <slot />
+      <slot />
     </main>
   </body>
 </html>

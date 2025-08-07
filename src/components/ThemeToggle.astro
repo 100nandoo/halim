@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button id="theme-toggle" class="btn btn-ghost btn-circle">
+  <Icon name="lucide:sun" class="h-5 w-5" id="theme-icon-light" />
+  <Icon name="lucide:moon" class="h-5 w-5" id="theme-icon-dark" />
+</button>
+
+<script>
+  const themeToggle = document.getElementById("theme-toggle");
+  const lightIcon = document.getElementById("theme-icon-light");
+  const darkIcon = document.getElementById("theme-icon-dark");
+  const html = document.documentElement;
+
+  const applyTheme = (theme: "nord" | "sunset") => {
+    html.setAttribute("data-theme", theme);
+    if (theme === "nord") {
+      lightIcon?.classList.remove("hidden");
+      darkIcon?.classList.add("hidden");
+    } else {
+      lightIcon?.classList.add("hidden");
+      darkIcon?.classList.remove("hidden");
+    }
+  };
+
+  // This script runs on the client, after the page has been rendered.
+  // We need to check the theme from local storage and apply it.
+  const storedTheme = localStorage.getItem("theme");
+
+  // Use 'sunset' as default dark theme if nothing is stored or value is invalid
+  let currentTheme: "nord" | "sunset" = "sunset";
+  if (storedTheme === "nord" || storedTheme === "sunset") {
+    currentTheme = storedTheme;
+  }
+
+  applyTheme(currentTheme);
+
+  themeToggle?.addEventListener("click", () => {
+    const newTheme = html.getAttribute("data-theme") === "sunset" ? "nord" : "sunset";
+    localStorage.setItem("theme", newTheme);
+    applyTheme(newTheme);
+  });
+</script>
